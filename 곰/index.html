@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곰과 함께하는 맛집 탐험 게임</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="background"></div>
+        <div class="bear-container">
+            <img src="아기 흑곰.webp" alt="곰 캐릭터" id="bear-img">
+        </div>
+        <div class="dialogue-box">
+            <p id="dialogue-text">안녕! 나는 곰이야! 오늘 맛있는 걸 먹고 싶은데, 함께 갈래?</p>
+            <button class="choice-button" id="choice1">그럼, 맛집을 찾아보자!</button>
+            <button class="choice-button" id="choice2">오늘은 다른 곳에 가고 싶어.</button>
+        </div>
+    </div>
+    <div id="minigame-container" class="minigame-container" style="display: none;">
+        <div id="find_the_cookie" class="minigame" style="display: none;">
+            <h2>쿠키를 찾아보세요!</h2>
+            <div class="cookie-game-area" id="cookie-game-area"></div>
+        </div>
+        <div id="ice_cream_challenge" class="minigame" style="display: none;">
+            <h2>아이스크림 만들기 도전!</h2>
+            <div class="ice-cream-game-area">
+                <p id="ice-cream-instruction">제시된 재료 조합을 맞춰보세요!</p>
+                <div id="ice-cream-options"></div>
+                <button class="ingredient-button" data-ingredient="초코">초코</button>
+                <button class="ingredient-button" data-ingredient="바닐라">바닐라</button>
+                <button class="ingredient-button" data-ingredient="딸기">딸기</button>
+            </div>
+            <div id="ice-cream-result"></div>
+        </div>
+        <div id="restaurant_quiz" class="minigame" style="display: none;">
+            <h2>레스토랑 퀴즈</h2>
+            <p>곰이 좋아하는 음식을 모두 선택하세요!</p>
+            <div id="quiz-options"></div>
+            <div id="quiz-hint"></div>
+        </div>
+    </div>
+    <div id="end-message" class="end-message" style="display: none;">
+        <h2>오늘도 맛집 성공!</h2>
+        <button id="restart-button" class="choice-button">다시 시작하기</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
